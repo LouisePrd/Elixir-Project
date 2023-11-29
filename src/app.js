@@ -1,4 +1,5 @@
-let request = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita";
+let request =
+  "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita";
 let randomRequest = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 
 /*fetch(request).then((response) => {
@@ -17,13 +18,18 @@ fetch(randomRequest).then((response) => {
 function getInfo(data) {
   let name = document.getElementById("nameCocktail");
   name.innerHTML = data.drinks[0].strDrink;
-
   let tabIngredients = [];
   for (let i = 1; i <= 5; i++) {
     let ingredient = data.drinks[0]["strIngredient" + i];
     if (ingredient != null) {
       tabIngredients.push(ingredient);
-      console.log(ingredient);
     }
   }
+}
+
+function addIngredient(name) {
+  let choice = document.getElementById("choice");
+  let li = document.createElement("li");
+  choice.appendChild(li);
+  li.innerHTML = name;
 }

@@ -11,7 +11,7 @@
 
 <body>
     <h1>Elixir</h1>
-    <p>Alright, now it's time for you to ✨shine✨ <br>and show off your mixology skills !<br>
+    <p id="presentationGame">Alright, now it's time for you to ✨shine✨ <br>and show off your mixology skills !<br>
         <br>Click on the ingredients to recreate this cocktail :<br><br>
         <span id="nameCocktail"></span>
     </p>
@@ -21,8 +21,7 @@
             <div id="ingredients">
                 <p>List of ingredients :</p>
                 <ul>
-                    <li>Lemon</li>
-                    <li>Ice</li>
+                    <li onclick="addIngredient('Ice')">Ice</li>
                     <li>Orange</li>
                     <li>Strawberry</li>
                     <li>Cherry</li>
@@ -31,10 +30,9 @@
             </div>
         </div>
         <div class="right">
-            <div id="ingredients">
+            <div id="choice">
                 <p>Your recipe :</p>
-                <ul>
-
+                <ul id="recipe">
                 </ul>
             </div>
         </div>
