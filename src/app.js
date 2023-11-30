@@ -3,7 +3,6 @@ let request =
 let randomRequest = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 let tabIngredients = [];
 let tabAllIngredients = [];
-let length = 0;
 
 fetch(randomRequest).then((response) => {
   response.json().then((data) => {
@@ -18,23 +17,35 @@ function getInfo(data) {
     let ingredient = data.drinks[0]["strIngredient" + i];
     if (ingredient != null) {
       tabIngredients.push(ingredient);
-      tabAllIngredients.push(ingredient);
-      length++;
     }
   }
   createListIngredients();
 }
 
 function createListIngredients() {
-  for (let i = 0; i < 10 - length; i++) {
+  // we get 12 - tabIngredients.length random ingredients
+  let randomIngredients = 12 - tabIngredients.length;
+  for (let i = 0; i < randomIngredients; i++) {
     fetch(randomRequest).then((response) => {
       response.json().then((data) => {
-        if (data.drinks[0].strIngredient1 != null)
-          tabAllIngredients.push(data.drinks[0].strIngredient1);
+        let ingredient = data.drinks[0].strIngredient1;
+        if (ingredient != null) {
+          tabAllIngredients.push(ingredient);
+        }
       });
     });
   }
+  displayIngredients();
 }
 
-function displayIngredients() {}
-console.log(tabAllIngredients);
+function displayIngredients() {
+  console.log(tabIngredients);
+  console.log(tabAllIngredients);
+  let listIngredients = document.getElementById("listIngredients");
+  listIngredients.innerHTML = "";
+  for (let i = 0; i < tabIngredients.length; i++) {
+    let li = document.createElement("li");
+    li.innerHTML = tabIngredients[i];
+    listIngredients.appendChild(li);
+  }
+}
