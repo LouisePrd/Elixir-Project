@@ -1,3 +1,56 @@
+@font-face {
+    font-family: Megrim;
+    src: url(./assets/fonts/Megrim/Megrim-Regular.ttf);
+}
+
+@font-face {
+    font-family: Arsenal;
+    src: url(./assets/fonts/Arsenal/Arsenal-Regular.ttf);
+}
+
 body {
-    background-color: cyan;
+    background-color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    font-family: Arsenal;
+    font-size: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    color: #BF9B30;
+    font-family: Megrim;
+    font-size: 65px;
+}
+
+li {
+    list-style-type: none;
+}
+
+#presentationGame {
+    text-align: center;
+}
+
+#nameCocktail {
+    text-align: center;
+    font-style: italic;
+}
+
+.game {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left,
+.right {
+    height: 200px;
+    width: 30%;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(63, 62, 62);
+    text-align: center;
 }
