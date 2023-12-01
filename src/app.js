@@ -23,24 +23,21 @@ function getInfo(data) {
 }
 
 function createListIngredients() {
-  // we get 12 - tabIngredients.length random ingredients
-  let randomIngredients = 12 - tabIngredients.length;
-  for (let i = 0; i < randomIngredients; i++) {
-    fetch(randomRequest).then((response) => {
-      response.json().then((data) => {
-        let ingredient = data.drinks[0].strIngredient1;
-        if (ingredient != null) {
-          tabAllIngredients.push(ingredient);
-        }
-      });
+  let randomLetter = String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+  let randomRequest =
+    "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=" + randomLetter;
+  fetch(randomRequest).then((response) => {
+    response.json().then((data) => {
+      if (data.drinks != null && data.drinks.length > 3) console.log(data);
+      else createListIngredients();
     });
-  }
+  });
   displayIngredients();
 }
 
 function displayIngredients() {
-  console.log(tabIngredients);
-  console.log(tabAllIngredients);
+  //console.log(tabIngredients);
+  //console.log(tabAllIngredients);
   let listIngredients = document.getElementById("listIngredients");
   listIngredients.innerHTML = "";
   for (let i = 0; i < tabIngredients.length; i++) {
