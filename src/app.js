@@ -1,15 +1,17 @@
 let request =
   "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita";
-let randomRequest = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
+let randomCocktail = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 let tabIngredients = [];
 let tabAllIngredients = [];
 
-fetch(randomRequest).then((response) => {
+// API request to get the cocktail
+fetch(randomCocktail).then((response) => {
   response.json().then((data) => {
     getInfo(data);
   });
 });
 
+// We get the name of the cocktail and the first 5 ingredients
 function getInfo(data) {
   let name = document.getElementById("nameCocktail");
   name.innerHTML = data.drinks[0].strDrink;
@@ -22,27 +24,41 @@ function getInfo(data) {
   createListIngredients();
 }
 
+// We create a list of random ingredients so the user can have options
+// We want 12 ingredients in total, 5 of them are the ingredients of the main cocktail
 function createListIngredients() {
   let randomLetter = String.fromCharCode(Math.floor(Math.random() * 26) + 97);
   let randomRequest =
     "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=" + randomLetter;
   fetch(randomRequest).then((response) => {
     response.json().then((data) => {
-      if (data.drinks != null && data.drinks.length > 3) console.log(data);
-      else createListIngredients();
+      if (
+        data.drinks.length > 12 - tabIngredients.length 
+      ) {
+        for (let i = 0; i < 12 - tabIngredients.length; i++) {
+          if (
+            !tabIngredients.includes(data.drinks[i].strIngredient1) &&
+            !tabAllIngredients.includes(data.drinks[i].strIngredient1)
+          )
+            tabAllIngredients.push(data.drinks[i].strIngredient1);
+        }
+      } else createListIngredients();
     });
   });
-  displayIngredients();
+
+  setTimeout(function () {
+    displayIngredients();
+  }, 100);
 }
 
+// We display the ingredients in the HTML to create a list
 function displayIngredients() {
-  //console.log(tabIngredients);
-  //console.log(tabAllIngredients);
+  tabAllIngredients = tabAllIngredients.concat(tabIngredients);
   let listIngredients = document.getElementById("listIngredients");
   listIngredients.innerHTML = "";
-  for (let i = 0; i < tabIngredients.length; i++) {
+  for (let i = 0; i < tabAllIngredients.length; i++) {
     let li = document.createElement("li");
-    li.innerHTML = tabIngredients[i];
+    li.innerHTML = tabAllIngredients[i];
     listIngredients.appendChild(li);
   }
 }
