@@ -12,7 +12,7 @@ body {
     background-color: black;
     font-family: Arsenal, Georgia, 'Times New Roman', Times, serif;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 h1 {
@@ -21,7 +21,7 @@ h1 {
     margin-bottom: 40px;
     color: #BF9B30;
     font-family: Megrim;
-    font-size: 65px;
+    font-size: 60px;
 }
 
 li {
@@ -52,7 +52,7 @@ li:hover {
 
 .left,
 .right {
-    height: 400px;
+    height: 380px;
     width: 40%;
     padding: 5px;
     margin: 10px;
@@ -64,6 +64,17 @@ li:hover {
     width: 100%;
     text-align: center;
     width: 100%;
+}
+
+.btnAdd {
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: rgb(63, 62, 62);
+    color: white;
+    font-size: 18px;
+    font-family: Arsenal;
 }
 
 #btnValidate {

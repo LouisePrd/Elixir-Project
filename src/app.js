@@ -37,8 +37,8 @@ window.onload = function () {
       response.json().then((data) => {
         if (data.drinks != null && data.drinks.length > nbIngredients) {
           for (let i = 0; i < nbIngredients; i++) {
-            let ingredient = data.drinks[i].strIngredient1;
-            if (ingredient != null && data.drinks != null) {
+            if (data.drinks[i] != null) {
+              let ingredient = data.drinks[i].strIngredient1;
               if (!tabAllIngredients.includes(ingredient))
                 tabAllIngredients.push(ingredient);
               else nbIngredients++;
@@ -56,10 +56,14 @@ window.onload = function () {
 
   // Display the ingredients in the HTML to create a list
   function displayIngredients() {
+    tabAllIngredients.sort(() => Math.random() - 0.5);
     let listIngredients = document.getElementById("listIngredients");
     for (let i = 0; i < tabAllIngredients.length; i++) {
       let li = document.createElement("li");
-      li.innerHTML = tabAllIngredients[i];
+      let btn = document.createElement("button");
+      btn.classList.add("btnAdd");
+      btn.innerHTML = tabAllIngredients[i];
+      li.appendChild(btn);
       listIngredients.appendChild(li);
 
       li.addEventListener("click", function () {
@@ -78,6 +82,7 @@ window.onload = function () {
     let li = document.createElement("li");
     li.innerHTML = ingredient;
     choice.appendChild(li);
+
     li.addEventListener("click", function () {
       let place = document
         .getElementById("listIngredients")
@@ -112,8 +117,13 @@ window.onload = function () {
           goodRecipe = false;
         }
       }
-      if (goodRecipe) alert("Well done !! You are the best 😍");
-      else alert("Not this time !! Try harder 💀");
+      if (goodRecipe) {
+        alert("Well done !! You are the best 😍");
+        location.reload();
+      } else {
+        alert("Not this time !! Try harder 💀");
+        location.reload();
+      }
     }
   });
 };
