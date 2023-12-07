@@ -43,6 +43,17 @@ li:hover {
     font-style: italic;
 }
 
+#start {
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: rgb(63, 62, 62);
+    color: white;
+    font-size: 18px;
+    font-family: Arsenal;
+}
+
 .game {
     display: flex;
     justify-content: center;
@@ -60,10 +71,14 @@ li:hover {
     text-align: center;
 }
 
-.play {
+.play, .instruction {
     width: 100%;
     text-align: center;
     width: 100%;
+}
+
+.instruction {
+    margin-bottom: 20px;
 }
 
 .btnAdd {
@@ -86,6 +101,5 @@ li:hover {
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    border-radius: 20px;   
+    border-radius: 20px;
 }
-
