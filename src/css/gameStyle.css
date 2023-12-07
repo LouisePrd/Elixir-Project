@@ -1,11 +1,11 @@
 @font-face {
     font-family: Megrim;
-    src: url(./assets/fonts/Megrim/Megrim-Regular.ttf);
+    src: url(../assets/fonts/Megrim/Megrim-Regular.ttf);
 }
 
 @font-face {
     font-family: Arsenal;
-    src: url(./assets/fonts/Arsenal/Arsenal-Regular.ttf);
+    src: url(../assets/fonts/Arsenal/Arsenal-Regular.ttf);
 }
 
 body {
@@ -55,6 +55,15 @@ li {
     background-color: #BF9B30;
 }
 
+.startDiv {
+    display: flex;
+    justify-content: center;
+}
+
+#clue {
+    color: grey;
+}
+
 .game {
     display: flex;
     justify-content: center;
@@ -72,11 +81,11 @@ li {
     text-align: center;
 }
 
-.play, .instruction {
+.play,
+.instruction {
     width: 100%;
     text-align: center;
     width: 100%;
-    margin-top: 10px;
 }
 
 .instruction {

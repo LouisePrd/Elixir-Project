@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/game.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/gameStyle.css">
     <title>Elixir</title>
 </head>
 
@@ -14,14 +14,16 @@
     <p id="presentationGame">Alright, now it's time for you to ✨shine✨ <br>and show off your mixology skills !<br>
     </p>
 
-    <btn id="start">Start</btn>
+    <div class="startDiv">
+        <btn id="start">Start</btn>
+    </div>
 
     <div class="game">
-
         <div class="instruction"><br>Click on the ingredients to recreate this cocktail :<br>
-            <span id="nameCocktail"></span>
+            <span id="nameCocktail"></span><img id="imgCocktail" src=""><br>
+            <br>
+            <span id="clue">Clue</span>
         </div>
-
         <div class="left">
             <p>List of ingredients :</p>
             <ul id="listIngredients">
@@ -32,7 +34,6 @@
             <ul id="recipe">
             </ul>
         </div>
-
         <div class="play"><button id="btnValidate">Cook</button></div>
     </div>
 
