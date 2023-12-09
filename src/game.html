@@ -10,22 +10,39 @@
 </head>
 
 <body>
-    <h1>Elixir</h1>
-    <p id="presentationGame">Alright, now it's time for you to ✨shine✨ <br>and show off your mixology skills !<br>
-    </p>
+    <div class="navbar">
+        <p class="logo">E</p>
+        <p>Discover</p>
+        <p>Play</p>
+        <hr class="hr-intro">
+
+    </div>
+
+    <div class="instruction-game">
+        <p class="title-guess">GUESS THE RECIPE</p>
+        <p class="presentation">Alright, now it's time for you to ✨shine✨ and show off your mixology skills !<br>Click
+            on the ingredients to recreate this cocktail :
+        </p>
+    </div>
+
 
     <div class="startDiv">
         <btn id="start">Start</btn>
     </div>
 
     <div class="game">
-        <div class="instruction"><br>Click on the ingredients to recreate this cocktail :<br>
-            <span id="nameCocktail"></span><img id="imgCocktail" src=""><br>
-            <br>
-            <span id="clue">Clue</span>
+        <div class="instruction">
+            <hr class="hr-game">
+            <div class="cocktail">
+                <p id="name-cocktail"></p>
+                <button id="clue">ⓘ</button>
+            </div>
+            <hr class="hr-game">
+            <img id="imgCocktail" src="">
         </div>
         <div class="left">
             <p>List of ingredients :</p>
+            <hr class="hr-list">
             <ul id="listIngredients">
             </ul>
         </div>

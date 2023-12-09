@@ -16,9 +16,7 @@ body {
 }
 
 h1 {
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 40px;
+    text-align: left;
     color: #BF9B30;
     font-family: Megrim;
     font-size: 60px;
@@ -27,6 +25,44 @@ h1 {
 li {
     list-style-type: none;
     text-align: left;
+    margin: 5px 2px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    font-family: Arsenal, Georgia, 'Times New Roman', Times, serif;
+    color: #E6E1CE;
+    flex-wrap: wrap;
+    margin-left: 2em;
+}
+
+.logo {
+    font-family: Megrim;
+    color: #BF9B30;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.title-guess {
+    font-family: Megrim;
+    font-size: 2.5em;
+    color: #BF9B30;
+}
+
+.presentation {
+    font-family: Arsenal;
+    font-size: 1.3em;
+    color: #E6E1CE;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.hr-intro {
+    border: 0.8px solid #BF9B30;
+    width: 100%;
+    margin: 0;
 }
 
 .btnAdd:hover {
@@ -34,13 +70,36 @@ li {
     cursor: pointer;
 }
 
-#presentationGame {
+#name-cocktail,
+#clue {
     text-align: center;
+    font-family: Megrim;
+    font-size: 2em;
+    color: #BF9B30;
+    margin: 0;
 }
 
-#nameCocktail {
-    text-align: center;
-    font-style: italic;
+#clue {
+    background-color: #000000;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    padding-left: 0.5em;
+}
+
+.cocktail {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hr-game {
+    border: 0.8px solid #BF9B30;
+    width: 50%;
+}
+
+.instruction-game {
+    margin-left: 8em;
 }
 
 #start {
@@ -60,10 +119,6 @@ li {
     justify-content: center;
 }
 
-#clue {
-    color: grey;
-}
-
 .game {
     display: flex;
     justify-content: center;
@@ -77,8 +132,7 @@ li {
     width: 40%;
     padding: 5px;
     margin: 10px;
-    background-color: rgb(63, 62, 62);
-    text-align: center;
+    color: #E6E1CE;
 }
 
 .play,
@@ -88,20 +142,24 @@ li {
     width: 100%;
 }
 
-.instruction {
-    margin-bottom: 20px;
+#listIngredients {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hr-list {
+    border: 0.5px solid #ffffff;
+    width: 70%;
+    left: 0;
 }
 
 .btnAdd {
-    border: none;
     text-decoration: none;
     cursor: pointer;
-    border-radius: 20px;
-    background-color: rgb(63, 62, 62);
     color: white;
     font-size: 18px;
     font-family: Arsenal;
-    margin-bottom: 4px;
+    background-color: #000000;
 }
 
 #btnValidate {

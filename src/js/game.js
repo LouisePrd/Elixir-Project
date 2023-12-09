@@ -6,7 +6,7 @@ window.onload = function () {
   let tabGoodIngredients = [];
   let tabUserIngredients = [];
   let gameDiv = document.getElementsByClassName("game")[0];
-  gameDiv.style.display = "none";
+  //gameDiv.style.display = "none";
   let linkImg = "";
 
   // API request to get the cocktail
@@ -20,8 +20,9 @@ window.onload = function () {
 
   // Get the name of the cocktail and first 5 ingredients
   function getInfo(data) {
-    let name = document.getElementById("nameCocktail");
+    let name = document.getElementById("name-cocktail");
     name.innerHTML = data.drinks[0].strDrink;
+    // we add span to the name to be able to change the color of the first letter
     for (let i = 1; i <= 5; i++) {
       let ingredient = data.drinks[0]["strIngredient" + i];
       if (ingredient != null && data.drinks != null) {
