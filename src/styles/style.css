@@ -5,8 +5,14 @@
 }
 
 @font-face {
-    font-family: Arsenal;
-    src: url(../assets/fonts/Arsenal/Arsenal-Regular.ttf);
+    font-family:Lora;
+    src: url(../assets/fonts/Lora/Lora-Regular.ttf);
+}
+
+@font-face {
+    font-family: Lora;
+    src: url(../assets/fonts/Lora/Lora-Bold.ttf);
+    font-weight: bold;
 }
 
 /* Déclaration des variables */
@@ -17,7 +23,7 @@
     --accent:#D1B05A;
     /* Polices */
     --title: Megrim;
-    --text: Arsenal;
+    --text: Lora;
 }
 
 body {
