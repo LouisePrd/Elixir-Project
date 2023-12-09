@@ -61,12 +61,18 @@ window.onload = function () {
     displayIngredients();
   });
 
-  // Display a clue for the user
+
+  let imgPlace = document.getElementById("imgCocktail");
+  imgPlace.style.display = "none";
+  // Display or hide a clue for the user
   let btnClue = document.getElementById("clue");
   btnClue.addEventListener("click", function () {
-    console.log(linkImg);
-    let imgPlace = document.getElementById("imgCocktail");
     imgPlace.src = linkImg;
+    if (imgPlace.style.display == "none") {
+      imgPlace.style.display = "block";
+    } else {
+      imgPlace.style.display = "none";
+    }
   });
 
   // Display the ingredients in the HTML to create a list

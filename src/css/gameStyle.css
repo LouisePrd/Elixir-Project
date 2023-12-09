@@ -28,6 +28,10 @@ li {
     margin: 5px 2px;
 }
 
+ul {
+    padding: 0;
+}
+
 .navbar {
     display: flex;
     align-items: center;
@@ -65,6 +69,11 @@ li {
     margin: 0;
 }
 
+.btnAdd {
+    padding: 5px 10px;
+    font-family: Arsenal;
+}
+
 .btnAdd:hover {
     color: #BF9B30;
     cursor: pointer;
@@ -85,6 +94,12 @@ li {
     padding: 0;
     cursor: pointer;
     padding-left: 0.5em;
+}
+
+#imgCocktail {
+    max-width: 10%;
+    height: auto;
+    margin: 0;
 }
 
 .cocktail {
@@ -126,20 +141,24 @@ li {
     flex-wrap: wrap;
 }
 
+.user-action {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left : 7.5em;
+}
+
 .left,
 .right {
     height: auto;
-    width: 40%;
+    width: 35%;
     padding: 5px;
     margin: 10px;
     color: #E6E1CE;
 }
 
-.play,
-.instruction {
-    width: 100%;
-    text-align: center;
-    width: 100%;
+.right {
+    background-color: grey;
 }
 
 #listIngredients {
@@ -149,7 +168,6 @@ li {
 
 .hr-list {
     border: 0.5px solid #ffffff;
-    width: 70%;
     left: 0;
 }
 
