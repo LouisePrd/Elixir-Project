@@ -22,78 +22,78 @@ body {
 h1 {
     color: #BF9B30;
     font-family: Megrim;
-    font-size: 2em;
+    font-size: 4em;
     display: block;
 
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
+    margin: 0;
+}
+
+.calibrage {
+    position: relative;
+    bottom: 1.3em;
+}
+
+.regle{
+    height: 3px;
+    width: 90%;
+
+    background-color: #BF9B30;
+    border: 0px solid #000000;
+    margin-left: auto; 
+    margin-right: 0;
 }
 
 .home-txt {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 
     width: 90vw;
+    height: 25vh;
     position: relative;
     top: 60px;
 }
 
 .dessus {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: 100%;
+    height: 50%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
 }
 
 .dessous {
-    border: 2px solid green;
+    /* border: 2px solid green; */
     width: 100%;
+    height: 50%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
 
+.block1,.block2 {
+    display: block;
+    width: 30%;
+    height: 65%;
+
+    background-color: black;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-family: Arsenal, Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    text-align: center;
 }
 
 .block1 {
-    display: block;
-    width: 200px;
-    height: 70px;
-
     border: 3px solid #BF9B30;
     color:#BF9B30;
-    background-color: black;
-    padding: 14px 28px;
-    font-size: 16px;
-    font-family: Arsenal, Georgia, 'Times New Roman', Times, serif;
-    cursor: pointer;
-    text-align: center;
-
-    position: relative;
-    top: 80px;
-    right: 20px
 }
 
 .block2 {
-    display: block;
-    width: 200px;
-    height: 70px;
-
     border: 3px solid white;
     color:white;
-    background-color: black;
-    padding: 14px 28px;
-    font-size: 16px;
-    font-family: Arsenal, Georgia, 'Times New Roman', Times, serif;
-    cursor: pointer;
-    text-align: center;
-
-    position: relative;
-    top: 20px;
-    right: 20px
 }
 
