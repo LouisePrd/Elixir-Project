@@ -13,96 +13,87 @@ body {
     font-family: Arsenal, Georgia, 'Times New Roman', Times, serif;
     color: white;
     font-size: 18px;
-}
-
-h1 {
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 40px;
-    color: #BF9B30;
-    font-family: Megrim;
-    font-size: 60px;
-}
-
-li {
-    list-style-type: none;
-    text-align: left;
-}
-
-.btnAdd:hover {
-    color: #BF9B30;
-    cursor: pointer;
-}
-
-#presentationGame {
-    text-align: center;
-}
-
-#nameCocktail {
-    text-align: center;
-    font-style: italic;
-}
-
-#start {
-    border: none;
-    cursor: pointer;
-    border-radius: 20px;
-    padding: 10px 20px;
-    background-color: rgb(63, 62, 62);
-    color: white;
-    font-size: 18px;
-    font-family: Arsenal;
-    background-color: #BF9B30;
-}
-
-.game {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
 }
 
-.left,
-.right {
-    height: auto;
-    width: 40%;
-    padding: 5px;
-    margin: 10px;
-    background-color: rgb(63, 62, 62);
-    text-align: center;
-}
-
-.play, .instruction {
-    width: 100%;
-    text-align: center;
-    width: 100%;
-    margin-top: 10px;
-}
-
-.instruction {
-    margin-bottom: 20px;
-}
-
-.btnAdd {
-    border: none;
-    text-decoration: none;
-    cursor: pointer;
-    border-radius: 20px;
-    background-color: rgb(63, 62, 62);
-    color: white;
-    font-size: 18px;
-    font-family: Arsenal;
-    margin-bottom: 4px;
-}
-
-#btnValidate {
+h1 {
+    color: #BF9B30;
     font-family: Megrim;
-    background-color: #BF9B30;
-    border: none;
-    color: rgb(0, 0, 0);
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    border-radius: 20px;
+    font-size: 2em;
+    display: block;
+
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
 }
+
+.home-txt {
+    border: 2px solid blue;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    width: 90vw;
+    position: relative;
+    top: 60px;
+}
+
+.dessus {
+    border: 2px solid red;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.dessous {
+    border: 2px solid green;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.block1 {
+    display: block;
+    width: 200px;
+    height: 70px;
+
+    border: 3px solid #BF9B30;
+    color:#BF9B30;
+    background-color: black;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-family: Arsenal, Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    text-align: center;
+
+    position: relative;
+    top: 80px;
+    right: 20px
+}
+
+.block2 {
+    display: block;
+    width: 200px;
+    height: 70px;
+
+    border: 3px solid white;
+    color:white;
+    background-color: black;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-family: Arsenal, Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    text-align: center;
+
+    position: relative;
+    top: 20px;
+    right: 20px
+}
+
