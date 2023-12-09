@@ -1,18 +1,5 @@
-@font-face {
-    font-family: Megrim;
-    src: url(./assets/fonts/Megrim/Megrim-Regular.ttf);
-}
-
-@font-face {
-    font-family: Arsenal;
-    src: url(./assets/fonts/Arsenal/Arsenal-Regular.ttf);
-}
 
 body {
-    background-color: black;
-    font-family: Arsenal, Georgia, 'Times New Roman', Times, serif;
-    color: white;
-    font-size: 18px;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -20,11 +7,10 @@ body {
 }
 
 h1 {
-    color: #BF9B30;
-    font-family: Megrim;
+    color: var(--accent);
+    font-family: var(--title);
     font-size: 4em;
     display: block;
-
     margin: 0;
 }
 
@@ -36,8 +22,7 @@ h1 {
 .regle{
     height: 3px;
     width: 90%;
-
-    background-color: #BF9B30;
+    background-color: var(--accent);
     border: 0px solid #000000;
     margin-left: auto; 
     margin-right: 0;
@@ -78,21 +63,19 @@ h1 {
     display: block;
     width: 30%;
     height: 65%;
-
-    background-color: black;
+    background-color: var(--primary);
     padding: 14px 28px;
     font-size: 16px;
-    font-family: Arsenal, Georgia, 'Times New Roman', Times, serif;
     cursor: pointer;
     text-align: center;
 }
 
 .block1 {
-    border: 3px solid #BF9B30;
-    color:#BF9B30;
+    border: 3px solid var(--accent);
+    color:var(--accent);
 }
 
 .block2 {
-    border: 3px solid white;
-    color:white;
+    border: 3px solid var(--secondary);
+    color:var(--secondary);
 }

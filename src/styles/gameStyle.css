@@ -1,24 +1,7 @@
-@font-face {
-    font-family: Megrim;
-    src: url(../assets/fonts/Megrim/Megrim-Regular.ttf);
-}
-
-@font-face {
-    font-family: Arsenal;
-    src: url(../assets/fonts/Arsenal/Arsenal-Regular.ttf);
-}
-
-body {
-    background-color: black;
-    font-family: Arsenal, Georgia, 'Times New Roman', Times, serif;
-    color: white;
-    font-size: 18px;
-}
-
 h1 {
     text-align: left;
-    color: #BF9B30;
-    font-family: Megrim;
+    color: var(--accent);
+    font-family: var(--title);
     font-size: 60px;
 }
 
@@ -36,46 +19,43 @@ ul {
     display: flex;
     align-items: center;
     font-size: 2em;
-    font-family: Arsenal, Georgia, 'Times New Roman', Times, serif;
     color: #E6E1CE;
     flex-wrap: wrap;
     margin-left: 2em;
 }
 
 .logo {
-    font-family: Megrim;
-    color: #BF9B30;
+    font-family: var(--title);
+    color: var(--accent);
     font-size: 2.5em;
     margin: 0;
 }
 
 .title-guess {
-    font-family: Megrim;
+    font-family: var(--title);
     font-size: 2.5em;
-    color: #BF9B30;
+    color: var(--accent);
 }
 
 .presentation {
-    font-family: Arsenal;
     font-size: 1.3em;
-    color: #E6E1CE;
+    color: var(--secondary);
     margin-top: 1.5em;
     margin-bottom: 1.5em;
 }
 
 .hr-intro {
-    border: 0.8px solid #BF9B30;
+    border: 0.8px solid var(--accent);
     width: 100%;
     margin: 0;
 }
 
 .btnAdd {
     padding: 5px 10px;
-    font-family: Arsenal;
 }
 
 .btnAdd:hover {
-    color: #BF9B30;
+    color: var(--accent);
     cursor: pointer;
 }
 
@@ -84,12 +64,12 @@ ul {
     text-align: center;
     font-family: Megrim;
     font-size: 2em;
-    color: #BF9B30;
+    color: var(--accent);
     margin: 0;
 }
 
 #clue {
-    background-color: #000000;
+    background-color: var(--primary);
     border: none;
     padding: 0;
     cursor: pointer;
@@ -109,7 +89,7 @@ ul {
 }
 
 .hr-game {
-    border: 0.8px solid #BF9B30;
+    border: 0.8px solid var(--accent);
     width: 50%;
 }
 
@@ -123,10 +103,8 @@ ul {
     border-radius: 20px;
     padding: 10px 20px;
     background-color: rgb(63, 62, 62);
-    color: white;
-    font-size: 18px;
-    font-family: Arsenal;
-    background-color: #BF9B30;
+    color: var(--secondary);
+    background-color: var(--accent);
 }
 
 .startDiv {
@@ -145,7 +123,7 @@ ul {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    margin-left : 7.5em;
+    margin-left: 7.5em;
 }
 
 .left,
@@ -154,7 +132,7 @@ ul {
     width: 35%;
     padding: 5px;
     margin: 10px;
-    color: #E6E1CE;
+    color: var(--secondary);
 }
 
 .right {
@@ -167,22 +145,22 @@ ul {
 }
 
 .hr-list {
-    border: 0.5px solid #ffffff;
+    border: 0.5px solid var(--secondary);
     left: 0;
 }
 
 .btnAdd {
     text-decoration: none;
     cursor: pointer;
-    color: white;
+    color: var(--secondary);
     font-size: 18px;
     font-family: Arsenal;
-    background-color: #000000;
+    background-color: var(--primary);
 }
 
 #btnValidate {
     font-family: Megrim;
-    background-color: #BF9B30;
+    background-color: var(--accent);
     border: none;
     color: rgb(0, 0, 0);
     padding: 10px 20px;

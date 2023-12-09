@@ -1,0 +1,33 @@
+/* ------ Import des polices ------ */
+@font-face {
+    font-family: Megrim;
+    src: url(../assets/fonts/Megrim/Megrim-Regular.ttf);
+}
+
+@font-face {
+    font-family: Arsenal;
+    src: url(../assets/fonts/Arsenal/Arsenal-Regular.ttf);
+}
+
+/* Déclaration des variables */
+:root {
+    /* Couleurs */
+    --primary: #000000;
+    --secondary:#E6E1CD;
+    --accent:#D1B05A;
+    /* Polices */
+    --title: Megrim;
+    --text: Arsenal;
+}
+
+body {
+    width:100vw;
+    max-width:100vw;
+    overflow-x: hidden;
+    margin:0;
+    padding:0;
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-family: var(--text);
+    font-size: 18px;
+}
