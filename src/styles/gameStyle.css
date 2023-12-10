@@ -98,17 +98,12 @@ ul {
     width: 50%;
 }
 
-.instruction-game {
-    margin-left: 8em;
-}
 
 #start {
     border: none;
     cursor: pointer;
-    border-radius: 20px;
     padding: 10px 20px;
-    background-color: rgb(63, 62, 62);
-    color: var(--secondary);
+    color: black;
     background-color: var(--accent);
 }
 
@@ -130,7 +125,6 @@ ul {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    margin-left: 7.5em;
 }
 
 .left,
