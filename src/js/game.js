@@ -63,8 +63,8 @@ window.onload = function () {
 
   // Set sizes container so theys have the same height
   function setSizes() {
-  let left = document.getElementsByClassName("left")[0];
-  let right = document.getElementsByClassName("right")[0];
+  let left = document.getElementById("listIngredients");
+  let right = document.getElementById("recipe");
   let heightLeft = left.offsetHeight;
   right.style.height = heightLeft + "px";
   }

@@ -7,28 +7,14 @@ h1 {
 
 li {
     list-style-type: none;
-    text-align: left;
-    margin: 5px 2px;
 }
 
 ul {
     padding: 0;
 }
 
-.navbar {
-    display: flex;
-    align-items: center;
-    font-size: 2em;
-    color: #E6E1CE;
-    flex-wrap: wrap;
-    margin-left: 2em;
-}
-
-.logo {
-    font-family: var(--title);
-    color: var(--accent);
-    font-size: 2.5em;
-    margin: 0;
+main {
+    margin-left: 7em;
 }
 
 .title-guess {
@@ -38,16 +24,10 @@ ul {
 }
 
 .presentation {
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: var(--secondary);
     margin-top: 1.5em;
     margin-bottom: 1.5em;
-}
-
-.hr-intro {
-    border: 0.8px solid var(--accent);
-    width: 100%;
-    margin: 0;
 }
 
 .btnAdd {
@@ -105,6 +85,7 @@ ul {
     padding: 10px 20px;
     color: black;
     background-color: var(--accent);
+    font-family: Lora;
 }
 
 .startDiv {
@@ -116,9 +97,12 @@ ul {
 
 .game {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+
+#arrow {
+    margin: 20px;
 }
 
 .user-action {
@@ -130,11 +114,16 @@ ul {
 .left,
 .right {
     height: auto;
-    width: 40%;
+    width: 30%;
     padding: 5px;
     margin: 10px;
     color: var(--secondary);
     min-width : 300px;
+}
+
+#recipe {
+    background-color: #1C1C1C;
+    padding: 20px;
 }
 
 #listIngredients {
@@ -166,4 +155,6 @@ ul {
     text-align: center;
     text-decoration: none;
     cursor: pointer;
+    font-size: 20px;
+    margin: 20px;
 }
