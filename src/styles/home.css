@@ -43,7 +43,6 @@ hr {
 }
 
 .home-menu {
-    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -53,28 +52,58 @@ hr {
 
 a {
     color: var(--secondary);
-    font-size: 1.3em;
     text-decoration: none;
+    transition:.3s ease-in-out;
+}
+
+main a {
+    font-size: 1.3em;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     border:1.5px solid var(--secondary);
     width:17vw;
     text-align: center;
     padding:3vh 0;
-    transition:.3s ease-in-out;
 }
 
-a:hover {
+main a:hover {
     letter-spacing: .3em;
     filter:brightness(1.3);
     border-radius:2px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.614);
 }
 
-a:first-of-type {
+main a:first-of-type {
     color:var(--accent);
     border:1.5px solid var(--accent);
     margin-bottom: 7vh;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-size: .5em;
+    letter-spacing: 0.2em;
+}
+
+footer p:first-of-type {
+    margin-left: 5vw;
+}
+
+footer p:last-of-type {
+    margin-right: 2vw;
+}
+
+footer a:hover {
+    filter:brightness(1.3);
+    text-decoration: underline;
 }
 
 /* ------ MOBILE ------ */
@@ -90,7 +119,7 @@ a:first-of-type {
         padding-bottom:3vh;
     }
     .home-txt {
-        margin-top: 30vh;
+        margin-top: 25vh;
         align-items: center;
     }
     hr {
@@ -104,7 +133,7 @@ a:first-of-type {
     .home-menu {
         margin-top: 0;
     }
-    a {
+    main a {
         width: 50vw;
         text-align: center;
         padding:2vh 0;
