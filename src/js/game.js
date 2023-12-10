@@ -67,10 +67,10 @@ window.onload = function () {
   let left = document.getElementById("listIngredients");
   let right = document.getElementById("recipe");
   let heightLeft = left.offsetHeight;
-  right.style.height = heightLeft + "px";
+  right.style.minHeight = heightLeft + "px";
   }
 
-  // Display or hide a clue for the user
+  // Display or hide a clue for the user on mouseover
   let btnClue = document.getElementById("clue");
   let imgPlace = document.getElementById("img-cocktail");
   imgPlace.style.display = "none";
@@ -82,6 +82,18 @@ window.onload = function () {
     btnClue.addEventListener("mouseout", function () {
       imgPlace.style.display = "none";
     });
+  });
+
+  // Same but onClick for accessibility
+  btnClue.addEventListener("click", function () {
+    imgPlace.src = linkImg;
+    if (imgPlace.style.display == "block") {
+      imgPlace.style.display = "none";
+    } else {
+    imgPlace.style.display = "block";
+    imgPlace.style.top = btnClue.offsetTop + 15 + "px";
+    imgPlace.style.left = btnClue.offsetLeft + 10 + "px";
+    }
   });
 
   // Display the ingredients in the HTML to create a list
