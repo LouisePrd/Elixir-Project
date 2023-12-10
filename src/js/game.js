@@ -72,16 +72,15 @@ window.onload = function () {
 
   // Display or hide a clue for the user
   let btnClue = document.getElementById("clue");
-  let imgPlace = document.getElementById("imgCocktail");
+  let imgPlace = document.getElementById("img-cocktail");
   imgPlace.style.display = "none";
   btnClue.addEventListener("mouseover", function () {
-    let imgCursor = document.getElementById("imgCocktail");
-    imgCursor.src = linkImg;
-    imgCursor.style.display = "block";
-    imgCursor.style.top = event.clientY + "px";
-    imgCursor.style.left = event.clientX + "px";
+    imgPlace.src = linkImg;
+    imgPlace.style.display = "block";
+    imgPlace.style.top = event.clientY + "px";
+    imgPlace.style.left = event.clientX + "px";
     btnClue.addEventListener("mouseout", function () {
-      imgCursor.style.display = "none";
+      imgPlace.style.display = "none";
     });
   });
 
@@ -132,10 +131,12 @@ window.onload = function () {
   }
 
   // Check if the recipe is good or not
-  document.querySelector("#btn-validate").addEventListener("click", function () {
+  let btnValidate = document.getElementById("btn-validate");
+  btnValidate.addEventListener("click", function () {
     console.log(tabGoodIngredients);
-    let resultOK = document.getElementById("resultOK");
-    let resultKO = document.getElementById("resultKO");
+    let resultRecipe = document.getElementById("result-recipe");
+    let message = document.getElementById("message");
+    resultRecipe.innerHTML = ""; // We clear the previous result
     if (tabUserIngredients.length < 2) {
       alert("You need at least 2 ingredients");
     } else {
@@ -146,9 +147,15 @@ window.onload = function () {
         }
       }
       if (goodRecipe) {
-        resultOK.innerHTML = "Congrats, barista!";
+        message.innerHTML = "SUCESS !";
+        resultRecipe.innerHTML = "Congrats, barista!";
+        btnValidate.innerHTML = "Restart";
+        btnValidate.addEventListener("click", function () {
+          location.reload();
+        });
       } else {
-        resultKO.innerHTML = "Try again !";
+        message.innerHTML = "NO !";
+        resultRecipe.innerHTML = "Try again !";
       }
     }
   });

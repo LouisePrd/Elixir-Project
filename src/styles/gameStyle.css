@@ -51,10 +51,10 @@ h1+p {
     border: none;
     padding: 0;
     cursor: pointer;
-    padding-left: 0.5em;
+    margin-left: 0.5em;
 }
 
-#imgCocktail {
+#img-cocktail {
     max-width: 15%;
     position: absolute;
 }
@@ -157,6 +157,23 @@ h1+p {
     text-align: center;
     cursor: pointer;
     font-size: 20px;
+}
+
+#message {
+    font-family: Megrim;
+    font-size: 1.5em;
+    color: var(--accent);
+    margin: 0;
+}
+
+#result-recipe {
+    margin: 0;
+    margin-bottom: 1em;
+    font-family: Lora;
+}
+
+.result {
+    text-align: center;
     margin-right: 60px;
 }
 
