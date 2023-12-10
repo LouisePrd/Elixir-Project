@@ -50,12 +50,6 @@ hr {
     margin-top:37vh;
 }
 
-a {
-    color: var(--secondary);
-    text-decoration: none;
-    transition:.3s ease-in-out;
-}
-
 main a {
     font-size: 1.3em;
     text-transform: uppercase;
@@ -82,28 +76,8 @@ main a:first-of-type {
 footer {
     position: absolute;
     bottom: 0;
-    width: 100vw;
-    height: 10vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--primary);
-    color: var(--secondary);
     font-size: .5em;
     letter-spacing: 0.2em;
-}
-
-footer p:first-of-type {
-    margin-left: 5vw;
-}
-
-footer p:last-of-type {
-    margin-right: 2vw;
-}
-
-footer a:hover {
-    filter:brightness(1.3);
-    text-decoration: underline;
 }
 
 /* ------ MOBILE ------ */

@@ -1,4 +1,7 @@
 window.onload = function () {
+  let footer = document.getElementsByTagName("footer")[0];
+  footer.style.marginTop = "25vh";
+
   let randomRequest =
     "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=" +
     String.fromCharCode(Math.floor(Math.random() * 26) + 97);
@@ -55,6 +58,7 @@ window.onload = function () {
   // Display the game on click
   let btnStart = document.getElementById("start");
   btnStart.addEventListener("click", function () {
+    footer.style.marginTop = "0";
     let startDiv = document.getElementsByClassName("start-div")[0];
     startDiv.remove();
     gameDiv.style.display = "flex";
