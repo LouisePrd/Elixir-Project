@@ -70,9 +70,9 @@ window.onload = function () {
   }
 
   // Display or hide a clue for the user
+  let btnClue = document.getElementById("clue");
   let imgPlace = document.getElementById("imgCocktail");
   imgPlace.style.display = "none";
-  let btnClue = document.getElementById("clue");
   btnClue.addEventListener("mouseover", function () {
     let imgCursor = document.getElementById("imgCocktail");
     imgCursor.src = linkImg;
@@ -95,7 +95,6 @@ window.onload = function () {
       btn.innerHTML = tabAllIngredients[i];
       li.appendChild(btn);
       listIngredients.appendChild(li);
-
       li.addEventListener("click", function () {
         if (!tabUserIngredients.includes(tabAllIngredients[i])) {
           addIngredient(tabAllIngredients[i]);
