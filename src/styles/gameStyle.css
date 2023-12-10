@@ -55,7 +55,7 @@ h1+p {
 }
 
 #imgCocktail {
-    max-width: 20%;
+    max-width: 15%;
     position: absolute;
 }
 
@@ -110,7 +110,6 @@ h1+p {
 .right {
     height: auto;
     width: 30%;
-    padding: 5px;
     margin: 10px;
     color: var(--secondary);
     min-width: 300px;
@@ -125,15 +124,13 @@ h1+p {
     padding-top: 5px;
 }
 
-#listIngredients>li {
-    padding: 5px;
-}
-
-
-
 #listIngredients {
     display: flex;
     flex-wrap: wrap;
+}
+
+#listIngredients>li {
+    padding: 5px;
 }
 
 .hr-list {
@@ -143,7 +140,6 @@ h1+p {
 }
 
 .btnAdd {
-    text-decoration: none;
     cursor: pointer;
     color: var(--secondary);
     font-size: 18px;
@@ -159,7 +155,6 @@ h1+p {
     color: black;
     padding: 10px 20px;
     text-align: center;
-    text-decoration: none;
     cursor: pointer;
     font-size: 20px;
     margin-right: 60px;
@@ -172,7 +167,8 @@ h1+p {
         margin-left: 1em;
     }
 
-    .instruction-game, h1+p {
+    .instruction-game,
+    h1+p {
         text-align: center;
     }
 
@@ -180,7 +176,8 @@ h1+p {
         font-size: 1.6em;
     }
 
-    .left, .right {
+    .left,
+    .right {
         width: 100%;
     }
 
@@ -190,5 +187,16 @@ h1+p {
 
     #arrow {
         display: none;
+    }
+
+    .result {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #btn-validate {
+        margin-right: 0;
+        font-size: 1em;
     }
 }

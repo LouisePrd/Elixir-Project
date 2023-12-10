@@ -133,7 +133,7 @@ window.onload = function () {
 
   // Check if the recipe is good or not
   document.querySelector("#btn-validate").addEventListener("click", function () {
-    console.log(tabUserIngredients);
+    console.log(tabGoodIngredients);
     let resultOK = document.getElementById("resultOK");
     let resultKO = document.getElementById("resultKO");
     if (tabUserIngredients.length < 2) {
