@@ -55,7 +55,8 @@ window.onload = function () {
   // Display the game on click
   let btnStart = document.getElementById("start");
   btnStart.addEventListener("click", function () {
-    btnStart.style.display = "none";
+    let startDiv = document.getElementsByClassName("start-div")[0];
+    startDiv.remove();
     gameDiv.style.display = "flex";
     displayIngredients();
     setSizes();
@@ -131,7 +132,7 @@ window.onload = function () {
   }
 
   // Check if the recipe is good or not
-  document.querySelector("#btnValidate").addEventListener("click", function () {
+  document.querySelector("#btn-validate").addEventListener("click", function () {
     console.log(tabUserIngredients);
     let resultOK = document.getElementById("resultOK");
     let resultKO = document.getElementById("resultKO");

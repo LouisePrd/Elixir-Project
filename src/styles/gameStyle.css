@@ -11,17 +11,21 @@ main {
     margin-bottom: 1em;
 }
 
-.title-guess {
+h1 {
     font-family: var(--title);
-    font-size: 2.5em;
+    font-size: 2.2em;
     color: var(--accent);
+    margin: 0;
+    margin-top: 6vh;
 }
 
-.presentation {
+h1+p {
     font-size: 1.2em;
     color: var(--secondary);
     margin-top: 1.5em;
-    margin-bottom: 1.5em;
+    font-size: 1em;
+    text-align: left;
+    margin-bottom: 5vh;
 }
 
 .btnAdd {
@@ -31,10 +35,6 @@ main {
 .btnAdd:hover {
     color: var(--accent);
     cursor: pointer;
-}
-
-.instruction {
-    width: 100%;
 }
 
 #name-cocktail,
@@ -55,9 +55,7 @@ main {
 }
 
 #imgCocktail {
-    max-width: 10%;
-    height: auto;
-    margin: 0;
+    max-width: 20%;
     position: absolute;
 }
 
@@ -80,10 +78,11 @@ main {
     color: black;
     background-color: var(--accent);
     font-family: Lora;
-    font-size: 20px;
+    font-size: 18px;
+    margin-top: 1em;
 }
 
-.startDiv {
+.start-div {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -114,19 +113,19 @@ main {
     padding: 5px;
     margin: 10px;
     color: var(--secondary);
-    min-width : 300px;
+    min-width: 300px;
 }
 
 #recipe {
     background-color: #1C1C1C;
 }
 
-#recipe > li {
+#recipe>li {
     padding-left: 15px;
     padding-top: 5px;
 }
 
-#listIngredients > li {
+#listIngredients>li {
     padding: 5px;
 }
 
@@ -153,7 +152,7 @@ main {
 
 }
 
-#btnValidate {
+#btn-validate {
     font-family: Megrim;
     background-color: var(--accent);
     border: none;
@@ -163,5 +162,33 @@ main {
     text-decoration: none;
     cursor: pointer;
     font-size: 20px;
-    margin-right : 60px;
+    margin-right: 60px;
+}
+
+/* ------ MOBILE ------ */
+@media screen and (max-width: 650px) {
+    main {
+        margin-right: 1em;
+        margin-left: 1em;
+    }
+
+    .instruction-game, h1+p {
+        text-align: center;
+    }
+
+    .title-guess {
+        font-size: 1.6em;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+
+    .btnAdd {
+        font-size: 1em;
+    }
+
+    #arrow {
+        display: none;
+    }
 }
