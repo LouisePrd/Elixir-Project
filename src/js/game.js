@@ -138,7 +138,7 @@ window.onload = function () {
     let message = document.getElementById("message");
     resultRecipe.innerHTML = ""; // We clear the previous result
     if (tabUserIngredients.length < 2) {
-      alert("You need at least 2 ingredients");
+      alert("You need at least 2 ingredients !");
     } else {
       let goodRecipe = true;
       for (let i = 0; i < tabUserIngredients.length; i++) {
