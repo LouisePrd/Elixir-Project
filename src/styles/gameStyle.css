@@ -76,9 +76,22 @@ h1+p {
     padding: 10px 20px;
     color: black;
     background-color: var(--accent);
+    border: 1px solid var(--accent);
     font-family: Lora;
     font-size: 18px;
     margin-top: 1em;
+    transition:.3s ease-in;
+}
+
+#start:hover {
+    background-color: var(--primary);
+    color: var(--accent);
+    border: 4px double var(--accent);
+    border-width: 1px 4px 1px 4px;
+    letter-spacing: .2em;
+    padding: 10px 25px;
+    filter:brightness(1.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .start-div {
