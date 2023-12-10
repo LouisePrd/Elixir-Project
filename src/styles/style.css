@@ -2,17 +2,20 @@
 @font-face {
     font-family: Megrim;
     src: url(../assets/fonts/Megrim/Megrim-Regular.ttf);
+    font-display: swap;
 }
 
 @font-face {
     font-family:Lora;
     src: url(../assets/fonts/Lora/Lora-Regular.ttf);
+    font-display: swap;
 }
 
 @font-face {
     font-family: Lora;
     src: url(../assets/fonts/Lora/Lora-Bold.ttf);
     font-weight: bold;
+    font-display: swap;
 }
 
 /* Déclaration des variables */

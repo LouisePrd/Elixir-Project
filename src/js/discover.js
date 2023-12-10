@@ -21,7 +21,7 @@ function createRecipeCard(cocktail) {
     // Variables
     let recipeCard = document.createElement("div");
     recipeCard.className = "recipe-card";
-    let recipeName = document.createElement("h3");
+    let recipeName = document.createElement("h2");
     recipeName.innerHTML = cocktail.strDrink;
     let recipeImg = document.createElement("img");
     recipeImg.src = cocktail.strDrinkThumb;
