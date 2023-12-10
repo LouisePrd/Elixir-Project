@@ -59,6 +59,10 @@ ul {
     cursor: pointer;
 }
 
+.instruction {
+    width: 100%;
+}
+
 #name-cocktail,
 #clue {
     text-align: center;
@@ -80,6 +84,7 @@ ul {
     max-width: 10%;
     height: auto;
     margin: 0;
+    position: absolute;
 }
 
 .cocktail {
@@ -110,6 +115,8 @@ ul {
 .startDiv {
     display: flex;
     justify-content: center;
+    width: 100%;
+    margin-top: 1em;
 }
 
 .game {
@@ -129,14 +136,11 @@ ul {
 .left,
 .right {
     height: auto;
-    width: 35%;
+    width: 40%;
     padding: 5px;
     margin: 10px;
     color: var(--secondary);
-}
-
-.right {
-    background-color: grey;
+    min-width : 300px;
 }
 
 #listIngredients {
@@ -146,7 +150,8 @@ ul {
 
 .hr-list {
     border: 0.5px solid var(--secondary);
-    left: 0;
+    margin-left: 0;
+    width: 70%;
 }
 
 .btnAdd {
@@ -162,10 +167,9 @@ ul {
     font-family: Megrim;
     background-color: var(--accent);
     border: none;
-    color: rgb(0, 0, 0);
+    color: black;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    border-radius: 20px;
 }

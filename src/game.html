@@ -26,33 +26,41 @@
         </p>
     </div>
 
+    <div class="instruction">
+        <hr class="hr-game">
+        <div class="cocktail">
+            <p id="name-cocktail"></p>
+            <button id="clue">ⓘ</button>
+        </div>
+        <hr class="hr-game">
+        <img id="imgCocktail" src="">
+    </div>
 
     <div class="startDiv">
         <btn id="start">Start</btn>
     </div>
 
     <div class="game">
-        <div class="instruction">
-            <hr class="hr-game">
-            <div class="cocktail">
-                <p id="name-cocktail"></p>
-                <button id="clue">ⓘ</button>
-            </div>
-            <hr class="hr-game">
-            <img id="imgCocktail" src="">
-        </div>
         <div class="left">
             <p>List of ingredients :</p>
             <hr class="hr-list">
             <ul id="listIngredients">
             </ul>
         </div>
+        <div class="arrow">
+            <img src="./assets/imgs/arrow.png" alt="arrow">
+        </div>
         <div class="right">
             <p>Your recipe :</p>
+            <hr class="hr-list">
             <ul id="recipe">
             </ul>
         </div>
-        <div class="play"><button id="btnValidate">Cook</button></div>
+        <div class="result">
+            <p id="resultOK"></p>
+            <button id="btnValidate">CHECK</button>
+            <p id="resultKO"></p>
+        </div>
     </div>
 
 

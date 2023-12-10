@@ -6,7 +6,7 @@ window.onload = function () {
   let tabGoodIngredients = [];
   let tabUserIngredients = [];
   let gameDiv = document.getElementsByClassName("game")[0];
-  //gameDiv.style.display = "none";
+  gameDiv.style.display = "none";
   let linkImg = "";
 
   // API request to get the cocktail
@@ -22,7 +22,6 @@ window.onload = function () {
   function getInfo(data) {
     let name = document.getElementById("name-cocktail");
     name.innerHTML = data.drinks[0].strDrink;
-    // we add span to the name to be able to change the color of the first letter
     for (let i = 1; i <= 5; i++) {
       let ingredient = data.drinks[0]["strIngredient" + i];
       if (ingredient != null && data.drinks != null) {
@@ -59,20 +58,30 @@ window.onload = function () {
     btnStart.style.display = "none";
     gameDiv.style.display = "flex";
     displayIngredients();
+    setSizes();
   });
 
+  // Set sizes container so theys have the same height
+  function setSizes() {
+  let left = document.getElementsByClassName("left")[0];
+  let right = document.getElementsByClassName("right")[0];
+  let heightLeft = left.offsetHeight;
+  right.style.height = heightLeft + "px";
+  }
 
+  // Display or hide a clue for the user
   let imgPlace = document.getElementById("imgCocktail");
   imgPlace.style.display = "none";
-  // Display or hide a clue for the user
   let btnClue = document.getElementById("clue");
-  btnClue.addEventListener("click", function () {
-    imgPlace.src = linkImg;
-    if (imgPlace.style.display == "none") {
-      imgPlace.style.display = "block";
-    } else {
-      imgPlace.style.display = "none";
-    }
+  btnClue.addEventListener("mouseover", function () {
+    let imgCursor = document.getElementById("imgCocktail");
+    imgCursor.src = linkImg;
+    imgCursor.style.display = "block";
+    imgCursor.style.top = event.clientY + "px";
+    imgCursor.style.left = event.clientX + "px";
+    btnClue.addEventListener("mouseout", function () {
+      imgCursor.style.display = "none";
+    });
   });
 
   // Display the ingredients in the HTML to create a list
@@ -122,7 +131,11 @@ window.onload = function () {
     }
   }
 
+  // Check if the recipe is good or not
   document.querySelector("#btnValidate").addEventListener("click", function () {
+    console.log(tabUserIngredients);
+    let resultOK = document.getElementById("resultOK");
+    let resultKO = document.getElementById("resultKO");
     if (tabUserIngredients.length < 2) {
       alert("You need at least 2 ingredients");
     } else {
@@ -133,11 +146,9 @@ window.onload = function () {
         }
       }
       if (goodRecipe) {
-        alert("Well done !! You are the best 😍");
-        location.reload();
+        resultOK.innerHTML = "Congrats, barista!";
       } else {
-        alert("Not this time !! Try harder 💀");
-        location.reload();
+        resultKO.innerHTML = "Try again !";
       }
     }
   });
