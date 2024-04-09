@@ -1,8 +1,8 @@
 # Elixir-Project
-Projet web en trinôme en utilisant une API.
+Web project with 3 students using an API.
 
-## LE CONCEPT
-Plongez la tête la première dans l'univers des cocktails. Grâce à **Elixir**, trouvez rapidement la recette pour réaliser vos envies et faire pétiller vos papilles ou réveillez le mixologue qui est en vous pour tenter de deviner les ingrédients... Cheers ! 🍹
+## CONCEPT
+Dive headfirst into the world of cocktails. Thanks to **Elixir**, you'll be able to quickly find the recipe you need to make all your desires come true and make your taste buds sparkle, or wake up the mixologist inside of you to try and guess the ingredients... Cheers! 🍹
 
  ## TECHNOS
  HTML, CSS, JavaScript
